@@ -32,20 +32,23 @@ const IMG=[
 ['Mutant CreaKong','/assets/products/mutant/mutant-creakong-1kg.png'],
 ['MyProtein Clear Whey Isolate','/assets/products/myprotein/myprotein-clear-whey-1-1lb.jpg'],
 ['RAW Itholate','/assets/products/official/raw-itholate.webp'],
+['RAW Thavage','/assets/products/raw/raw-thavage.png'],
 ['RAW Essential','/assets/products/official/raw-essential.webp'],
 ['RAW Pump','/assets/products/official/raw-pump.webp'],
 ['Psychotic Rojo','/assets/products/official/psychotic-rojo.png'],
+['Psychotic Black','/assets/products/insane-labz/psychotic-black.png'],
 ['RAW EAA Plus','/assets/products/official/raw-eaa-plus.webp'],
 ['Evogen Beta Alanine','/assets/products/official/evogen-beta-alanine.jpg'],
 ['GAT Omega-3','/assets/products/official/gat-omega-3.png'],
 ['GAT Vitamin D3 + K2','/assets/products/gat/gat-vitamin-d3-k2.png'],
 ['GAT Caffeine','/assets/products/gat/gat-caffeine.png'],
 ['Applied Probiotic','/assets/products/official/applied-probiotic.webp'],
+['Applied Hydration','/assets/products/applied/applied-hydration-7-sticks.jpg'],
 ];
 const OFFICIAL_IMAGE_HOSTS=['dymatize.com','getrawnutrition.com','insanelabz.com','evogennutrition.com','gatsport.com','appliednutrition.uk'];
 function productImage(name){let m=IMG.find(x=>name.toLowerCase().includes(x[0].toLowerCase()));return m&&m[1].startsWith('/assets/products/')?m[1]:''}
 function brandName(name){const brands=['MyProtein','MyVitamins','Dymatize','Evogen','Mutant','GAT','BioSport','Applied','ACS','Revive','RYSE','Psychotic','Nutrex','BSN','RAW','THE'];return brands.find(b=>name.toLowerCase().startsWith(b.toLowerCase()))||'VDSEN STORE'}
-function initials(name){return `<span class="brand-fallback">${brandName(name)}</span><small>IMAGEN OFICIAL PENDIENTE</small>`}
+function initials(name){return `<span class="brand-fallback">${brandName(name)}</span><small>IMAGEN PENDIENTE</small>`}
 const WHATSAPP_NUMBER=''; // Configurar en formato internacional, sin + ni espacios.
 const money=n=>'$'+n.toLocaleString('es-MX');function whatsappUrl(p){const flavor=p[2]&&p[2]!==' '?`\nSabor/presentación: ${p[2]}`:'';return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hola VDSEN STORE. Me interesa:\n${p[1]}${flavor}\nPrecio público: ${money(p[3])}`)}`}
 function render(){let q=document.querySelector('#q').value.toLowerCase(),a=document.querySelector('#availability').value,s=document.querySelector('#sort').value;let x=P.filter(p=>(cat==='Todos'||p[0]===cat)&&(a==='all'||p[5]===a)&&(`${p[0]} ${p[1]} ${p[2]}`).toLowerCase().includes(q));if(s==='low')x.sort((a,b)=>a[3]-b[3]);if(s==='high')x.sort((a,b)=>b[3]-a[3]);let groups=[...new Set(x.map(p=>p[0]))],html='';groups.forEach(g=>{html+=`<h2 class="section-title"><span>—</span> ${g}</h2><div class="grid">`;x.filter(p=>p[0]===g).forEach(p=>{let im=productImage(p[1]);html+=`<article class="card"><div class="product-media">${im?`<img src="${im}" alt="${p[1]}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><div class="img-fallback" style="display:none">${initials(p[1])}</div>`:`<div class="img-fallback">${initials(p[1])}</div>`}<div class="stock-pill ${p[5]==='stock'?'':'order-pill'}">${p[5]==='stock'?'EN STOCK':'SOBRE PEDIDO'}</div><div class="brand-dot">VDSEN</div></div><div class="card-body"><h3>${p[1]}</h3><div class="flavor">${p[2]||' '}</div><div class="price"><div><small>Público</small><br><strong>${money(p[3])}</strong></div><div class="dist"><small>Distribuidor</small><br><b>${money(p[4])}</b></div></div><a class="whatsapp" href="${WHATSAPP_NUMBER?whatsappUrl(p):'#'}" ${WHATSAPP_NUMBER?'target="_blank" rel="noopener"':'aria-disabled="true" title="Configura WHATSAPP_NUMBER para activar"'}>PEDIR POR WHATSAPP</a></div></article>`});html+='</div>'});document.querySelector('#catalog').innerHTML=html||'<div class="empty">No encontramos productos con esos filtros.</div>'}['q','availability','sort'].forEach(id=>document.querySelector('#'+id).addEventListener(id==='q'?'input':'change',render));render();
