@@ -27,18 +27,18 @@ const P=[
 ['HYROX','THE Energy Gel · caja 20','Raspberry Lemonade',749,629,'order'],['HYROX','THE Pre Workout Gel · caja 12','Green Apple',649,539,'order'],['HYROX','THE Whey · 30 serv','Cookies & Cream',1169,1029,'order'],['HYROX','THE Creatine · 30 serv','Blue Raspberry',749,629,'order'],['HYROX','THE Electro · 30 serv','Sabores según disponibilidad',649,529,'order']];
 let cat='Todos'; const cats=['Todos',...new Set(P.map(x=>x[0]))];const tabs=document.querySelector('#tabs');cats.forEach(c=>{let b=document.createElement('button');b.className='tab'+(c==='Todos'?' on':'');b.textContent=c;b.onclick=()=>{cat=c;document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('on',x.textContent===c));render()};tabs.appendChild(b)});
 const IMG=[
-['Dymatize ISO100','https://dymatize.com/cdn/shop/files/ISO100_CocoaPebbles_3lb.png'],
-['RAW Itholate','https://getrawnutrition.com/cdn/shop/files/heroshot_faa158c9-5083-4927-bacc-82276ce2bc24.webp?v=1776648147&width=600'],
-['RAW Essential','https://getrawnutrition.com/cdn/shop/files/Essential_Pre_-_Sour_Watermelon_-_Front.webp?v=1761313598&width=1080'],
-['RAW Pump','https://getrawnutrition.com/cdn/shop/files/RAWPumpOrangeMango.webp?v=1775747291&width=600'],
-['Psychotic Rojo','https://insanelabz.com/cdn/shop/files/Psychotic-Apple-Front.png?v=1774454161&width=600'],
-['RAW EAA Plus','https://getrawnutrition.com/cdn/shop/files/EAAplus_-_Watermelon_Grape_-_front.webp?v=1757355287&width=1080'],
-['Evogen Beta Alanine','https://www.evogennutrition.com/cdn/shop/files/renderBetaAlaninerender02.jpg?v=1727985106&width=600'],
-['GAT Omega-3','https://gatsport.com/cdn/shop/files/Omega-3.png?v=1787781815&width=2048'],
-['Applied Probiotic','https://appliednutrition.uk/cdn/shop/files/Probiotic_60_Capsules.webp?v=1777431069'],
+['Dymatize ISO100','/assets/products/official/dymatize-iso100.png'],
+['RAW Itholate','/assets/products/official/raw-itholate.webp'],
+['RAW Essential','/assets/products/official/raw-essential.webp'],
+['RAW Pump','/assets/products/official/raw-pump.webp'],
+['Psychotic Rojo','/assets/products/official/psychotic-rojo.png'],
+['RAW EAA Plus','/assets/products/official/raw-eaa-plus.webp'],
+['Evogen Beta Alanine','/assets/products/official/evogen-beta-alanine.jpg'],
+['GAT Omega-3','/assets/products/official/gat-omega-3.png'],
+['Applied Probiotic','/assets/products/official/applied-probiotic.webp'],
 ];
 const OFFICIAL_IMAGE_HOSTS=['dymatize.com','getrawnutrition.com','insanelabz.com','evogennutrition.com','gatsport.com','appliednutrition.uk'];
-function productImage(name){let m=IMG.find(x=>name.toLowerCase().includes(x[0].toLowerCase()));if(!m)return '';try{return OFFICIAL_IMAGE_HOSTS.some(host=>new URL(m[1]).hostname===host||new URL(m[1]).hostname.endsWith('.'+host))?m[1]:''}catch{return ''}}
+function productImage(name){let m=IMG.find(x=>name.toLowerCase().includes(x[0].toLowerCase()));return m&&m[1].startsWith('/assets/products/')?m[1]:''}
 function initials(){return 'IMAGEN OFICIAL PENDIENTE'}
 const WHATSAPP_NUMBER=''; // Configurar en formato internacional, sin + ni espacios.
 const money=n=>'$'+n.toLocaleString('es-MX');function whatsappUrl(p){const flavor=p[2]&&p[2]!==' '?`\nSabor/presentación: ${p[2]}`:'';return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hola VDSEN STORE. Me interesa:\n${p[1]}${flavor}\nPrecio público: ${money(p[3])}`)}`}
