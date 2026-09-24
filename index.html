@@ -29,18 +29,15 @@ let cat='Todos'; const cats=['Todos',...new Set(P.map(x=>x[0]))];const tabs=docu
 const IMG=[
 ['Dymatize ISO100','https://dymatize.com/cdn/shop/files/ISO100_CocoaPebbles_3lb.png'],
 ['RAW Itholate','https://getrawnutrition.com/cdn/shop/files/heroshot_faa158c9-5083-4927-bacc-82276ce2bc24.webp?v=1776648147&width=600'],
-['MyProtein Impact Whey Isolate','https://www.gosupps.com/media/catalog/product/7/1/71j9KdogFfL.jpg'],
-['MyProtein Impact Whey','https://static.thcdn.com/productimg/original/10852500-1615304620165133.jpg'],
 ['RAW Essential','https://getrawnutrition.com/cdn/shop/files/Essential_Pre_-_Sour_Watermelon_-_Front.webp?v=1761313598&width=1080'],
 ['RAW Pump','https://getrawnutrition.com/cdn/shop/files/RAWPumpOrangeMango.webp?v=1775747291&width=600'],
 ['Psychotic Rojo','https://insanelabz.com/cdn/shop/files/Psychotic-Apple-Front.png?v=1774454161&width=600'],
 ['RAW EAA Plus','https://getrawnutrition.com/cdn/shop/files/EAAplus_-_Watermelon_Grape_-_front.webp?v=1757355287&width=1080'],
-['THE Pre Workout Gel','https://static.thcdn.com/productimg/original/15213800-1815225365930206.jpg'],
-['THE Electro','https://static.thcdn.com/productimg/original/15285122-1705194751462757.jpg'],
 ['Evogen Beta Alanine','https://www.evogennutrition.com/cdn/shop/files/renderBetaAlaninerender02.jpg?v=1727985106&width=600'],
-['MyProtein HYROX THE Electro','https://static.thcdn.com/productimg/original/15285122-1705194751462757.jpg'],
+['GAT Omega-3','https://gatsport.com/cdn/shop/files/Omega-3.png?v=1787781815&width=2048'],
+['Applied Probiotic','https://appliednutrition.uk/cdn/shop/files/Probiotic_60_Capsules.webp?v=1777431069'],
 ];
-const OFFICIAL_IMAGE_HOSTS=['dymatize.com','getrawnutrition.com','insanelabz.com','evogennutrition.com'];
+const OFFICIAL_IMAGE_HOSTS=['dymatize.com','getrawnutrition.com','insanelabz.com','evogennutrition.com','gatsport.com','appliednutrition.uk'];
 function productImage(name){let m=IMG.find(x=>name.toLowerCase().includes(x[0].toLowerCase()));if(!m)return '';try{return OFFICIAL_IMAGE_HOSTS.some(host=>new URL(m[1]).hostname===host||new URL(m[1]).hostname.endsWith('.'+host))?m[1]:''}catch{return ''}}
 function initials(){return 'IMAGEN OFICIAL PENDIENTE'}
 const WHATSAPP_NUMBER=''; // Configurar en formato internacional, sin + ni espacios.
