@@ -28,6 +28,8 @@ const P=[
 let cat='Todos'; const cats=['Todos',...new Set(P.map(x=>x[0]))];const tabs=document.querySelector('#tabs');cats.forEach(c=>{let b=document.createElement('button');b.className='tab'+(c==='Todos'?' on':'');b.textContent=c;b.onclick=()=>{cat=c;document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('on',x.textContent===c));render()};tabs.appendChild(b)});
 const IMG=[
 ['Dymatize ISO100','/assets/products/official/dymatize-iso100.png'],
+['Mutant Whey','/assets/products/mutant/mutant-whey-5lb-cookies-cream.png'],
+['Mutant CreaKong','/assets/products/mutant/mutant-creakong-1kg.png'],
 ['RAW Itholate','/assets/products/official/raw-itholate.webp'],
 ['RAW Essential','/assets/products/official/raw-essential.webp'],
 ['RAW Pump','/assets/products/official/raw-pump.webp'],
@@ -35,6 +37,8 @@ const IMG=[
 ['RAW EAA Plus','/assets/products/official/raw-eaa-plus.webp'],
 ['Evogen Beta Alanine','/assets/products/official/evogen-beta-alanine.jpg'],
 ['GAT Omega-3','/assets/products/official/gat-omega-3.png'],
+['GAT Vitamin D3 + K2','/assets/products/gat/gat-vitamin-d3-k2.png'],
+['GAT Caffeine','/assets/products/gat/gat-caffeine.png'],
 ['Applied Probiotic','/assets/products/official/applied-probiotic.webp'],
 ];
 const OFFICIAL_IMAGE_HOSTS=['dymatize.com','getrawnutrition.com','insanelabz.com','evogennutrition.com','gatsport.com','appliednutrition.uk'];
