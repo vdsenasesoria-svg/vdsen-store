@@ -53,9 +53,11 @@ const IMG=[
 ['GAT Caffeine','/assets/products/gat/gat-caffeine.png'],
 ['Applied Probiotic','/assets/products/official/applied-probiotic.webp'],
 ['Applied Hydration','/assets/products/applied/applied-hydration-7-sticks.jpg'],
+['C4 Performance Energy','/assets/products/c4/c4-performance-energy-grape.webp'],
+['RAW Thavage RTD','/assets/products/raw/raw-thavage-rtd.jpg'],
 ];
 const OFFICIAL_IMAGE_HOSTS=['dymatize.com','getrawnutrition.com','insanelabz.com','evogennutrition.com','gatsport.com','appliednutrition.uk'];
-function productImage(name,flavor=''){if(name==='RAW Thavage RTD')return '';let key=`${name}|${flavor}`.toLowerCase();let m=IMG.find(x=>key.includes(x[0].toLowerCase()));if(!m)m=IMG.find(x=>name.toLowerCase().includes(x[0].toLowerCase()));return m&&m[1].startsWith('/assets/products/')?m[1]:''}
+function productImage(name,flavor=''){let key=`${name}|${flavor}`.toLowerCase();let m=IMG.find(x=>key.includes(x[0].toLowerCase()));if(!m)m=IMG.find(x=>name.toLowerCase().includes(x[0].toLowerCase()));return m&&m[1].startsWith('/assets/products/')?m[1]:''}
 function brandName(name){const brands=['MyProtein','MyVitamins','Dymatize','Evogen','Mutant','GAT','BioSport','Applied','ACS','Revive','RYSE','Psychotic','Nutrex','BSN','RAW','C4','THE'];return brands.find(b=>name.toLowerCase().startsWith(b.toLowerCase()))||'VDSEN STORE'}
 function initials(name){return `<span class="brand-fallback">${brandName(name)}</span><small>IMAGEN PENDIENTE</small>`}
 const money=n=>Number.isFinite(n)?'$'+n.toLocaleString('es-MX'):'Por confirmar';
