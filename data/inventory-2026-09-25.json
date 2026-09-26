@@ -1,0 +1,37 @@
+{
+  "cutoffDate": "2026-09-25",
+  "products": [
+    { "catalogName": "Mutant CreaKong 1 kg", "inventoryName": "Mutant CreaKong 1000 g", "section": "A", "category": "Creatina", "stock": { "currentQuantity": 2 }, "public": true },
+    { "catalogName": "GAT Omega-3 90 ct", "inventoryName": "GAT Omega-3", "section": "A", "category": "Salud / Micronutrientes", "stock": { "currentQuantity": 3 }, "public": true },
+    { "catalogName": "GAT Caffeine 100 ct", "inventoryName": "GAT Caffeine 100 ct", "section": "A", "category": "Salud / Micronutrientes", "stock": { "currentQuantity": 3 }, "public": true },
+    { "catalogName": "GAT Vitamin D3 + K2 60 ct", "inventoryName": "GAT D3/K2 60 ct", "section": "A", "category": "Salud / Micronutrientes", "stock": { "currentQuantity": 2 }, "public": true },
+    { "catalogName": "BioSport Magnesium Glycinate 120 ct", "inventoryName": "BioSport Magnesium Glycinate 450 mg 120 ct", "section": "A", "category": "Salud / Micronutrientes", "stock": { "currentQuantity": 3 }, "public": true },
+    { "catalogName": "MyProtein Clear Whey Isolate 1.1 lb", "inventoryName": "MyProtein Clear Whey Isolate 1.1 lb", "section": "A", "category": "Proteínas", "stock": { "variants": { "Fruit Punch": 1, "Orange Creamsicle": 1, "Strawberry": 1 } }, "public": true },
+    { "catalogName": "Evogen ISOJECT 2 lb", "inventoryName": "Evogen ISOJECT 2 lb", "section": "A", "category": "Proteínas", "stock": { "variants": { "S'mores": 1, "Ice Cream Sandwich": 1 } }, "public": true },
+    { "catalogName": "RAW Itholate 2 lb", "inventoryName": "RAW Itholate 2 lb", "section": "A", "category": "Proteínas", "stock": { "variants": { "Dubai Pistachio Chocolate": 1, "Mint Chip Ice Cream": 1 } }, "public": true },
+    { "catalogName": "Mutant Whey 5 lb", "inventoryName": "Mutant Whey 5 lb", "section": "A", "category": "Proteínas", "stock": { "variants": { "Cookies & Cream": 1 } }, "public": true },
+    { "catalogName": "Applied Hydration + Electrolyte 7 sticks", "inventoryName": "Applied Hydration + Electrolyte 7 sticks", "section": "A", "category": "Hidratación", "stock": { "variants": { "Lemon & Lime": 1, "Tropical Vibes": 1 } }, "public": true },
+    { "catalogName": "ACS L-Citrulline", "inventoryName": "ACS L-Citrulline", "section": "A", "category": "Rendimiento", "stock": { "currentQuantity": 2 }, "public": true },
+    { "catalogName": "RYSE Loaded Pre V2", "inventoryName": "RYSE Loaded Pre V2", "section": "A", "category": "Pre-entrenos", "stock": { "variants": { "Sour Punch Watermelon": 1, "Kool-Aid Grape": 1 } }, "public": true },
+    { "catalogName": "Psychotic Black", "inventoryName": "Psychotic Black", "section": "A", "category": "Pre-entrenos", "stock": { "variants": { "Watermelon": 1 } }, "public": true },
+    { "catalogName": "Psychotic Rojo", "inventoryName": "Psychotic Rojo", "section": "A", "category": "Pre-entrenos", "stock": { "variants": { "Grape": 1 } }, "public": true },
+    { "catalogName": "Revive Yohimbine", "inventoryName": "Revive Yohimbine", "section": "A", "category": "Yohimbina", "stock": { "baseQuantity": 4, "currentQuantity": 2 }, "public": true },
+    { "catalogName": "Applied Probiotic Advanced Multi-Strain", "inventoryName": "Applied Probiotic Advanced Multi-Strain 60 caps", "section": "B", "category": "Salud / Micronutrientes", "stock": { "currentQuantity": 1 }, "public": true },
+    { "catalogName": "MyVitamins Daily Multivitamin", "inventoryName": "MyVitamins Daily Multivitamin 60 tabs", "section": "B", "category": "Salud / Micronutrientes", "stock": { "currentQuantity": 1 }, "public": true },
+    { "catalogName": "MyProtein HYROX THE Electro", "inventoryName": "MyProtein HYROX THE Electro Lemon Lime 217 g", "section": "B", "category": "Hidratación", "stock": { "currentQuantity": 1 }, "public": true },
+    { "catalogName": "RAW Essential Pre", "inventoryName": "RAW Essential Pre Grape", "section": "B", "category": "Pre-entrenos", "stock": { "currentQuantity": 2 }, "public": true },
+    { "catalogName": "Dymatize ISO100 3 lb", "inventoryName": "Dymatize ISO100 3 lb", "section": "B", "category": "Proteínas", "stock": { "variants": { "Cocoa Pebbles": 1, "Fudge Brownie": 2 } }, "public": true },
+    { "catalogName": "RAW EAA Plus", "inventoryName": "RAW EAA Plus Watermelon", "section": "B", "category": "Rendimiento", "stock": { "currentQuantity": 3 }, "public": true },
+    { "catalogName": "RAW Thavage", "inventoryName": "RAW Thavage", "section": "B", "category": "Pre-entrenos", "stock": { "variants": { "Lion's Blood": 1, "Lychee": 1 } }, "public": true },
+    { "catalogName": "C4 Performance Energy", "inventoryName": "C4 Performance Energy Grape", "section": "B", "category": "Pre-entrenos", "stock": { "baseQuantity": 6, "currentQuantity": 5 }, "public": true },
+    { "catalogName": "RAW Thavage RTD", "inventoryName": "RAW Thavage RTD", "section": "B", "category": "Pre-entrenos", "stock": { "looseUnits": 4, "closedCases": [{ "quantity": 1, "unitsPerCase": 12 }] }, "public": true },
+    { "catalogName": "ACS Yohimbine HCl", "inventoryName": "ACS Yohimbine HCl", "section": "C", "category": "Rendimiento", "stock": { "currentQuantity": 3 }, "public": true },
+    { "catalogName": "Oxandrolona 10 mg", "inventoryName": "Oxandrolona 10 mg / 50 comprimidos", "section": "D", "category": "Farmacología", "stock": { "currentQuantity": 1 }, "public": false },
+    { "catalogName": "EnaPrime Testosterone Enanthate", "inventoryName": "EnaPrime Testosterone Enanthate 250 mg/ml", "section": "D", "category": "Farmacología", "stock": { "currentQuantity": 2 }, "public": false }
+  ],
+  "movements": [
+    { "date": "2026-09-24", "type": "sale", "catalogName": "Revive Yohimbine", "variant": "estándar", "quantity": 1, "resultingStock": 3 },
+    { "date": "2026-09-24", "type": "sale", "catalogName": "C4 Performance Energy", "variant": "Grape", "quantity": 1, "resultingStock": 5 },
+    { "date": "2026-09-25", "type": "sale", "catalogName": "Revive Yohimbine", "variant": "estándar", "quantity": 1, "resultingStock": 2 }
+  ]
+}
